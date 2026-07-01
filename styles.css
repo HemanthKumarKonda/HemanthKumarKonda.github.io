@@ -120,7 +120,34 @@ button { font: inherit; }
 .project-card h3 { margin: 0 0 6px; font-size: .96rem; line-height: 1.25; letter-spacing: -0.03em; }
 .tools { margin: 0 0 12px; color: var(--accent); font-size: .76rem; font-weight: 650; }
 .project-card p:not(.tools) { margin: 0; color: var(--muted); font-size: .8rem; }
-.project-card a { width: fit-content; margin-top: auto; display: inline-flex; color: var(--accent); background: var(--accent-soft); padding: 7px 11px; border-radius: 999px; font-size: .72rem; font-weight: 650; }
+.project-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 22px;
+}
+
+.project-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: 7px 11px;
+  border-radius: 999px;
+  font-size: .72rem;
+  font-weight: 650;
+  text-decoration: none;
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.project-actions a:hover {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 10px 22px rgba(47, 128, 237, 0.12);
+}
 .center-link { text-align: center; margin-top: 42px; }
 .center-link a { color: var(--accent); font-size: .8rem; font-weight: 650; }
 
@@ -184,4 +211,11 @@ button { font: inherit; }
   .timeline-card, .project-card, .skill-card, .service-card, .education-card, .contact-card { padding: 20px; }
   .brand-text { max-width: 170px; overflow: hidden; text-overflow: ellipsis; }
   .footer-inner { flex-direction: column; text-align: center; }
+   .project-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .project-actions a {
+    width: 100%;
 }
